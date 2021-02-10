@@ -8,6 +8,22 @@ describe("Conway Sequence", () => {
   it("Returns correct second row", () => {
     equal("11", getConwaySequenceForRow(2));
   });
+  it("Returns default with negative number", () => {
+    equal("1", getConwaySequenceForRow(-1));
+  });
+  it("Returns default on zero", () => {
+    equal("1", getConwaySequenceForRow(0));
+  });
+  it("Returns correct first row", () => {
+    equal("1", getConwaySequenceForRow(1));
+  });
+  it("Returns error message when result string would exceed limits", () => {
+    equal("Sequence is too long to compute!", getConwaySequenceForRow(80));
+  });
+  it("Can handle decimal numbers", () => {
+    equal("13211311123113112211", getConwaySequenceForRow(10.87)); //10th Row OR
+    //equal("11131221133112132113212221", getConwaySequenceForRow(10.87)); //..11th Row
+  });
 });
 
 // Install Instructions:
