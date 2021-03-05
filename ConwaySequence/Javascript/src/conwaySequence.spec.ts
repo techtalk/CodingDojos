@@ -1,5 +1,5 @@
 import { equal } from "assert";
-import {getConwaySequenceForRow} from "./conwaySequence";
+import {getConwaySequenceForRow, getNextRow} from "./conwaySequence";
 
 describe("Conway Sequence", () => {
   it("should be able to execute a test", () => {
@@ -18,11 +18,14 @@ describe("Conway Sequence", () => {
     equal("1", getConwaySequenceForRow(1));
   });
   it("Returns error message when result string would exceed limits", () => {
-    equal("Sequence is too long to compute!", getConwaySequenceForRow(80));
+    equal("Sequence was too long to compute!", getConwaySequenceForRow(80));
   });
   it("Can handle decimal numbers", () => {
-    equal("13211311123113112211", getConwaySequenceForRow(10.87)); //10th Row OR
-    //equal("11131221133112132113212221", getConwaySequenceForRow(10.87)); //..11th Row
+    //equal("13211311123113112211", getConwaySequenceForRow(10.87)); //10th Row OR
+    equal("11131221133112132113212221", getConwaySequenceForRow(10.87)); //..11th Row
+  });
+  it("Returns correct row", () => {
+    equal("11", getNextRow('31131211131221'));
   });
 });
 
