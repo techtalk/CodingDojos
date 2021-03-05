@@ -19,6 +19,7 @@ describe("Conway Sequence", () => {
   });
   it("Returns error message when result string would exceed limits", () => {
     equal("Sequence was too long to compute!", getConwaySequenceForRow(80));
+    //Falls Einschränken der Inputs Option -> Memeoization (Dictionary von Zeile -> Output) statt algorithmus
   });
   it("Can handle decimal numbers", () => {
     //equal("13211311123113112211", getConwaySequenceForRow(10.87)); //10th Row OR
