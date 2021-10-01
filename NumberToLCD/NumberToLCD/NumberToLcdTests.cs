@@ -22,5 +22,12 @@ namespace NumberToLCD
             string testString = new NumberToLcdConverter().IntToString(35);
 
         }
+
+        [Fact]
+        public void NumberMinus7()
+        {
+            string testString = new NumberToLcdConverter().IntToString(-7);
+
+        }
     }
 }

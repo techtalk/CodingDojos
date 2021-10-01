@@ -10,7 +10,7 @@
     {
         public string IntToString(int i)
         {
-            return "7";
+            return "Foo";
         }
     }
 }
