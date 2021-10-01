@@ -16,5 +16,11 @@ namespace NumberToLCD
 
             Assert.Equal(expectedOutput, testString);
         }
+        [Fact]
+        public void Number35()
+        {
+            string testString = new NumberToLcdConverter().IntToString(35);
+
+        }
     }
 }
