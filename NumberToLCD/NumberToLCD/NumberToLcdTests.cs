@@ -1,0 +1,20 @@
+using System;
+using ApprovalTests;
+using ApprovalTests.Reporters;
+using Xunit;
+
+namespace NumberToLCD
+{
+    public class NumberToLcdTests
+    {
+        [Fact]
+        public void Number1()
+        {
+            const string expectedOutput = "";
+
+            string testString = new NumberToLcdConverter().IntToString(1);
+
+            Assert.Equal(expectedOutput, testString);
+        }
+    }
+}
