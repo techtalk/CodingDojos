@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="System.Formats.Asn1" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NumberToLCDTests.Test1.approved.txt">
+      <DependentUpon>NumberToLcdTests.cs</DependentUpon>
+    </None>
+    <None Update="NumberToLCDTests.Test1.approved.txt.bak">
+      <DependentUpon>NumberToLcdTests.cs</DependentUpon>
+    </None>
+    <None Update="NumberToLCDTests.Test2.approved.txt">
+      <DependentUpon>NumberToLcdTests.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>
