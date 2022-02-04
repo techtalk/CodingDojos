@@ -3,12 +3,7 @@ using System.Globalization;
 
 namespace ZertifikatFehlersuche
 {
-    public class CA_DB
-    {
-        public string[][] data { get; set; }
-    }
-
-    public class CertificateUpdater
+    public class CertificateUpdater_TeamA
     {
         private const string DB_TYPE_REV = "R"; /* Revoked  */
         private const string DB_TYPE_EXP = "E" /* Expired  */;
@@ -23,51 +18,36 @@ namespace ZertifikatFehlersuche
 
         public static int do_updatedb(ref CA_DB db)
         {
-            DateTime a_tm = DateTime.Now;
-            int cnt = 0;
-            int db_y2k, a_y2k; /* flags = 1 if y >= 2000 */
-            string a_tm_s;
-
-            a_tm_s = a_tm.ToString(CultureInfo.InvariantCulture);
-
+            DateTime time = DateTime.Now;
+            int countExpired = 0;
+            string timeString;
+            timeString = time.ToString(CultureInfo.InvariantCulture);
             //if (strncmp(a_tm_s, "49", 2) <= 0)
-            if (strncmp(a_tm_s, 49, 2))
-                a_y2k = 1;
-            else
-                a_y2k = 0;
-
             foreach (string[] rrow in db.data)
             {
                 if (rrow[DB_type] == DB_TYPE_VAL)
                 {
                     /* ignore entries that are not valid */
-                    if (strncmp(rrow[DB_exp_date], 49, 2))
-                        db_y2k = 1;
-                    else
-                        db_y2k = 0;
-
-                    if (db_y2k == a_y2k)
+                    var dbIsBefore2K = !strncmp(rrow[DB_exp_date], 49, 2); /* flags = 1 if y >= 2000 */
+                    //remove in 2050
+                    if (rrow[DB_exp_date].Length == 13)
+                    {
+                        var prefix = dbIsBefore2K ? "19" : "20";
+                        rrow[DB_exp_date] = prefix + rrow[DB_exp_date];
+                    }
+                    //make actual datetime conversion/comparison
+                    var isInvalid = long.Parse(rrow[DB_exp_date].Substring(0, 14)) < long.Parse(time.ToString("yyyyMMddhhmmss"));
+                    if (dbIsBefore2K || isInvalid)
                     {
                         /* all on the same y2k side */
                         //if (strcmp(rrow[DB_exp_date], a_tm_s) <= 0)
-                        if (long.Parse(rrow[DB_exp_date].Substring(0, 12)) < long.Parse(a_tm.ToString("yyMMddhhmmss")))
-                        {
-                            rrow[DB_type] = DB_TYPE_EXP;
-                            cnt++;
-
-                            Console.WriteLine($"{rrow[DB_serial]} is expired");
-                        }
-                    } else if (db_y2k < a_y2k)
-                    {
                         rrow[DB_type] = DB_TYPE_EXP;
-                        cnt++;
-
+                        countExpired++;
                         Console.WriteLine($"{rrow[DB_serial]} is expired");
                     }
                 }
             }
-
-            return cnt;
+            return countExpired;
         }
 
         private static bool strncmp(string a_tm_s, int toCompare, int length)
