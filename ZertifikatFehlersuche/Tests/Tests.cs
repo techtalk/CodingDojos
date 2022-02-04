@@ -22,7 +22,7 @@ namespace Tests
             },
             new[]
             {
-                "V", "730501230003Z", "1003", "unknown", "/C=AT/ST=Austria/L=OpenSSL/O=OpenSSL/OU=OpenSSL/CN=2073",
+                "V", "20730501230003Z", "1003", "unknown", "/C=AT/ST=Austria/L=OpenSSL/O=OpenSSL/OU=OpenSSL/CN=2073",
             }
         };
 
