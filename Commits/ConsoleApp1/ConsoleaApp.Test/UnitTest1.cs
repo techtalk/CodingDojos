@@ -14,7 +14,6 @@ namespace ConsoleaApp.Test
             Assert.Equal("Soll nach Gruppenanzahl oder Mitgliederanzahl die Gruppen gebildet werden?", printer.Lines.Last());
         }
 
-
     }
 
     class Printer
@@ -41,13 +40,16 @@ namespace ConsoleaApp.Test
 
     internal class GroupBuilder
     {
+        private Printer _printer;
+        
         public GroupBuilder(Printer printer)
         {
+            _printer = printer;
         }
 
         internal void PrintGroupBuildingQuestion()
         {
-            throw new NotImplementedException();
+            _printer.WriteLine("Soll nach Gruppenanzahl oder Mitgliederanzahl die Gruppen gebildet werden?");
         }
     }
 }
