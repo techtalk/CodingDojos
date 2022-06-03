@@ -2,13 +2,14 @@ using System.Xml.Serialization;
 
 namespace ConsoleaApp.Test
 {
-    public class UnitTest1
+    public class GroupBuilderTest
     {
         [Fact]
-        public void GetQuestionIfGroupCountOrMemberCountGroupBuilding()
+        public void PrintGroupBuildingQuestion_LastLineIsExpectedQuestion()
         {
             Printer printer = new Printer();
             var groupBuilder = new GroupBuilder(printer);
+
             groupBuilder.PrintGroupBuildingQuestion();
            
             Assert.Equal("Soll nach Gruppenanzahl oder Mitgliederanzahl die Gruppen gebildet werden?", printer.Lines.Last());
