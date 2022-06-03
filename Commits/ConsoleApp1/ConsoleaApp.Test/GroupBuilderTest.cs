@@ -40,6 +40,10 @@ namespace ConsoleaApp.Test
             Lines.Add(text);
         }
 
+        internal string ReadLine()
+        {
+            return Lines.Last();
+        }
     }  
     
     class ConsolePrinter 
@@ -71,7 +75,7 @@ namespace ConsoleaApp.Test
 
         internal void ReadBuilderMode()
         {
-            throw new NotImplementedException();
+           BuilderMode =  _printer.ReadLine();
         }
     }
 }
