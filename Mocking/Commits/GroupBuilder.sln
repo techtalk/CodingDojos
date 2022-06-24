@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32519.111
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{F47A0982-F730-430E-8003-2B91B3FF4BCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupBuilder", "GroupBuilder\GroupBuilder.csproj", "{F47A0982-F730-430E-8003-2B91B3FF4BCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleaApp.Test", "ConsoleaApp.Test\ConsoleaApp.Test.csproj", "{D64877C9-7A96-4766-93F0-1972B677D9CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupBuilder.Test", "GroupBuilder.Test\GroupBuilder.Test.csproj", "{D64877C9-7A96-4766-93F0-1972B677D9CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
