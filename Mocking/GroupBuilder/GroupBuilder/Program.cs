@@ -1,7 +1,10 @@
 ﻿using GroupBuilder;
 
 var groupBuilder = new GroupBuilder.GroupBuilder();
-groupBuilder.SetupGroupBuilderViaConsole();
+groupBuilder.PrintGroupBuildingQuestion();
+groupBuilder.ReadBuilderMode();
+groupBuilder.PrintCountQuestion();
+groupBuilder.ReadCount();
 
 var participants = Person.PersonConverter(CsvParser.ConvertCsvToStrings());
 var groups = groupBuilder.BuildGroups(participants);

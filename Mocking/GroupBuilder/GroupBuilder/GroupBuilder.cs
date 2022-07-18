@@ -14,34 +14,26 @@ public class GroupBuilder
     private GroupMode _mode;
     private int _count;
 
-    public void SetupGroupBuilderViaConsole()
-    {
-        PrintGroupBuildingQuestion();
-        ReadBuilderMode();
-        PrintCountQuestion();
-        ReadCount();
-    }
-
-    private void PrintGroupBuildingQuestion()
+    public void PrintGroupBuildingQuestion()
     {
         Console.WriteLine("Soll nach Gruppenanzahl oder Mitgliederanzahl die Gruppen gebildet werden? (g/m):");
     }
 
-    private void PrintCountQuestion()
+    public void PrintCountQuestion()
     {
         Console.WriteLine(_mode == GroupMode.Group
             ? "Wie viele Gruppen sollen gebildet werden?"
             : "Wie viele Personen sollen je Gruppe sein?");
     }
 
-    private void ReadBuilderMode()
+    public void ReadBuilderMode()
     {
         BuilderMode = Console.ReadLine()!.ToLower();
 
         _mode = BuilderMode.StartsWith('m') ? GroupMode.Person : GroupMode.Group;
     }
 
-    private void ReadCount()
+    public void ReadCount()
     {
         var readLine = Console.ReadLine()!;
         _count = int.Parse(readLine);
