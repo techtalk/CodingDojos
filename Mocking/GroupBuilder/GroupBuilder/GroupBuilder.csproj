@@ -17,4 +17,8 @@
     </None>
   </ItemGroup>
 
+	<ItemGroup Condition="'$(Configuration)'=='Debug'">
+		<InternalsVisibleTo Include="GroupBuilder.Test" />
+	</ItemGroup>
+
 </Project>
