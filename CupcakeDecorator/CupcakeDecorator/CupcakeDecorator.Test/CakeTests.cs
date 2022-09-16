@@ -1,12 +1,12 @@
 ﻿using Xunit;
 
-namespace CupcakeDecorator.Test;
+namespace CakeDecorator.Test;
 
-public class CupcakeTests
+public class CakeTests
 {
     [Fact]
     //The name function should return “🧁”
-    public void Cupcake_Name_ReturnsCupcake()
+    public void Cake_Name_ReturnsCupcake()
     {
         //arrange
 
@@ -20,7 +20,7 @@ public class CupcakeTests
 
     [Fact]
     //The price function should return 1$ for “🧁”
-    public void Cupcake_Price_ReturnsCupcake()
+    public void Cake_Price_ReturnsCupcake()
     {
         //arrange
 

@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CupcakeDecorator\CupcakeDecorator.csproj" />
+    <ProjectReference Include="..\CupcakeDecorator\CakeDecorator.csproj" />
   </ItemGroup>
 
 </Project>
