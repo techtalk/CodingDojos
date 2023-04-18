@@ -16,5 +16,12 @@ namespace Playwright.Steps
             _user = hooks.User;
             _plenumHomePage = plenumHomePage;
         }
+
+        [Given(@"the user is on the Plenum homepage")]
+        public async Task GivenTheUserIsOnThePlenumHomepage()
+        {
+            await _plenumHomePage.OpenHomepage();
+            await _plenumHomePage.AssertPageContent();
+        }
     }
 }
