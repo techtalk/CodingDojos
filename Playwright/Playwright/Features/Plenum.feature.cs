@@ -74,12 +74,12 @@ namespace Playwright.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Sitzung erstellen")]
-        public void SitzungErstellen()
+        [NUnit.Framework.DescriptionAttribute("1. Sitzung erstellen")]
+        public void _1_SitzungErstellen()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sitzung erstellen", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1. Sitzung erstellen", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -97,6 +97,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("dieser Benutzer loggt sich ein", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 6
+ testRunner.When("der Benutzer die Sitzung \'GX-Playwright-Sitzung\' mit der Sitzungsart \'GX_Gemeinde" +
+                        "ratssitzung\' erstellt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 7
  testRunner.Then("sollte eine Sitzung \'GX-Playwright-Sitzung\' mit der Sitzungsart \'GX_Gemeinderatss" +
                         "itzung\' existieren", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -105,13 +109,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Teilnehmende in vorhandener Sitzung hinzufügen")]
-        public void TeilnehmendeInVorhandenerSitzungHinzufugen()
+        [NUnit.Framework.DescriptionAttribute("2. Teilnehmer in vorhandener Sitzung hinzufügen")]
+        public void _2_TeilnehmerInVorhandenerSitzungHinzufugen()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Teilnehmende in vorhandener Sitzung hinzufügen", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Teilnehmer in vorhandener Sitzung hinzufügen", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -121,22 +125,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
+#line 10
  testRunner.Given("der Benutzer ist auf der Plenum Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 10
+#line 11
  testRunner.And("dieser Benutzer loggt sich ein", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 11
+#line 12
  testRunner.And("der Benutzer sich auf der Startseite befindet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 13
  testRunner.And("der Benutzer die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 13
+#line 14
  testRunner.When("der Benutzer den vorhandenen Teilnehmer \'Verena Muster\' hinzufügt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
+#line 15
  testRunner.Then("sollte die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' den Teilnehmer \'V" +
                         "erena Muster\' hinterlegt haben", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -145,13 +149,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Erstelle Tagesordnungspunkte und füge diesen einer Sitzung hinzu")]
-        public void ErstelleTagesordnungspunkteUndFugeDiesenEinerSitzungHinzu()
+        [NUnit.Framework.DescriptionAttribute("3. Erstelle Tagesordnungspunkte und füge diesen einer Sitzung hinzu")]
+        public void _3_ErstelleTagesordnungspunkteUndFugeDiesenEinerSitzungHinzu()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Erstelle Tagesordnungspunkte und füge diesen einer Sitzung hinzu", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 16
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3. Erstelle Tagesordnungspunkte und füge diesen einer Sitzung hinzu", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -161,64 +165,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 17
- testRunner.Given("der Benutzer ist auf der Plenum Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 18
- testRunner.And("dieser Benutzer loggt sich ein", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("der Benutzer ist auf der Plenum Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 19
- testRunner.And("der Benutzer sich auf der Startseite befindet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 20
- testRunner.When("der Benutzer einen neuen Tagesordnungspunkt \'GX_TOP\' erstellt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 21
- testRunner.And("der Benutzer die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 22
- testRunner.And("diesen Tagesordnungspunkt \'GX_TOP\' zuordnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 23
- testRunner.Then("sollte dieser Tagesordnungspunkt \'GX_TOP\' existieren", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Erstelle Tagesordnungspunkte in Sitzung")]
-        public void ErstelleTagesordnungspunkteInSitzung()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Erstelle Tagesordnungspunkte in Sitzung", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 25
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 26
- testRunner.Given("der Benutzer ist auf der Plenum Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 27
  testRunner.And("dieser Benutzer loggt sich ein", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 20
  testRunner.And("der Benutzer sich auf der Startseite befindet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
- testRunner.When("der Benutzer die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
+ testRunner.When("der Benutzer einen neuen Tagesordnungspunkt \'GX_TOP\' erstellt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 30
- testRunner.And("der Benutzer einen neuen Tagesordnungspunkt \'GX_TOP2\' anlegt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.And("der Benutzer die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 31
+#line 23
+ testRunner.And("diesen Tagesordnungspunkt \'GX_TOP\' zuordnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 24
  testRunner.Then("sollte dieser Tagesordnungspunkt \'GX_TOP\' in der Sitzung mit der Sitzungsart \'GX_" +
                         "Gemeinderatssitzung\' existieren", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -227,13 +192,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Erstelle Kommentar in Tagesordnungspunkte in Sitzung")]
-        public void ErstelleKommentarInTagesordnungspunkteInSitzung()
+        [NUnit.Framework.DescriptionAttribute("4. Erstelle Tagesordnungspunkte in Sitzung")]
+        public void _4_ErstelleTagesordnungspunkteInSitzung()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Erstelle Kommentar in Tagesordnungspunkte in Sitzung", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 33
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4. Erstelle Tagesordnungspunkte in Sitzung", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 26
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -243,81 +208,80 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 34
+#line 27
  testRunner.Given("der Benutzer ist auf der Plenum Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 35
+#line 28
  testRunner.And("dieser Benutzer loggt sich ein", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 29
+ testRunner.And("der Benutzer sich auf der Startseite befindet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 30
+ testRunner.When("der Benutzer die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 31
+ testRunner.And("der Benutzer einen neuen Tagesordnungspunkt \'GX_TOP2\' anlegt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 32
+ testRunner.Then("sollte dieser Tagesordnungspunkt \'GX_TOP2\' in der Sitzung mit der Sitzungsart \'GX" +
+                        "_Gemeinderatssitzung\' existieren", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("5. Erstelle Kommentar in Tagesordnungspunkte in Sitzung")]
+        public void _5_ErstelleKommentarInTagesordnungspunkteInSitzung()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. Erstelle Kommentar in Tagesordnungspunkte in Sitzung", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 34
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 35
+ testRunner.Given("der Benutzer ist auf der Plenum Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 36
- testRunner.And("der Benutzer sich auf der Startseite befindet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("dieser Benutzer loggt sich ein", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
- testRunner.And("der Benutzer die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("der Benutzer sich auf der Startseite befindet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 38
- testRunner.And("der Benutzer den Tagesordnungspunkt \'GX_TOP\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 39
- testRunner.When("der Benutzer einen Kommentar \'kommentar\' anlegt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 40
- testRunner.Then("sollte dieser Kommentar \'kommentar\' sich auf dem Tagesordnungspunkt befinden", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Ändere den Status eines Tagesordnungspunkts auf \'Abgeschlossen\'")]
-        public void AndereDenStatusEinesTagesordnungspunktsAufAbgeschlossen()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ändere den Status eines Tagesordnungspunkts auf \'Abgeschlossen\'", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 42
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 43
- testRunner.Given("der Benutzer ist auf der Plenum Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 44
- testRunner.And("dieser Benutzer loggt sich ein", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 45
- testRunner.And("der Benutzer sich auf der Startseite befindet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 46
  testRunner.And("der Benutzer die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 39
  testRunner.And("der Benutzer den Tagesordnungspunkt \'GX_TOP\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 48
- testRunner.When("der Benutzer den Status auf \'Beschlossen\' ändert", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
+ testRunner.When("der Benutzer einen Kommentar \'kommentar\' anlegt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 49
- testRunner.Then("sollte der Tagesordnungspunkt \'GX_TOP\' den Status \'Beschlossen\' haben", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 41
+ testRunner.Then("sollte dieser Kommentar \'kommentar\' auf dem Tagesordnungspunkt \'GX_TOP\' in der Si" +
+                        "tzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' existieren", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Zeige Abgeschlossene Sitzungen")]
-        public void ZeigeAbgeschlosseneSitzungen()
+        [NUnit.Framework.DescriptionAttribute("6. Ändere den Status eines Tagesordnungspunkts auf \'Abgeschlossen\'")]
+        public void _6_AndereDenStatusEinesTagesordnungspunktsAufAbgeschlossen()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Zeige Abgeschlossene Sitzungen", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 51
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6. Ändere den Status eines Tagesordnungspunkts auf \'Abgeschlossen\'", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 43
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -327,20 +291,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 52
+#line 44
  testRunner.Given("der Benutzer ist auf der Plenum Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 53
+#line 45
  testRunner.And("dieser Benutzer loggt sich ein", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 46
  testRunner.And("der Benutzer sich auf der Startseite befindet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 55
- testRunner.When("der Benutzer \'abgeschlossene Sitzungen anzeigen\' anklickt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 47
+ testRunner.And("der Benutzer die Sitzung mit der Sitzungsart \'GX_Gemeinderatssitzung\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 56
- testRunner.Then("sollte er alle abgeschlossene Sitzungen sehen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 48
+ testRunner.And("der Benutzer den Tagesordnungspunkt \'GX_TOP\' öffnet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 49
+ testRunner.When("der Benutzer den Status auf \'Beschlossen\' ändert", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 50
+ testRunner.Then("sollte der Tagesordnungspunkt \'GX_TOP\' in der Sitzung mit der Sitzungsart \'GX_Gem" +
+                        "einderatssitzung\' den Status \'Beschlossen\' haben", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

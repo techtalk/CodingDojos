@@ -1,5 +1,4 @@
 ﻿Feature: PlaywrightSample
-	An example how a use palywright
 
 Scenario: Search for Playwright on DuckDuckGo (after Record)
 	Given start the recorded test

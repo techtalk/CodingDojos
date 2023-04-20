@@ -8,12 +8,12 @@ namespace Playwright.Steps
     [Binding]
     public class PlenumSteps
     {
-        private readonly IPage _user;
+        private readonly IPage _currentPage;
         private readonly PlenumPage _plenumHomePage;
 
         public PlenumSteps(PlaywrightHooks hooks, PlenumPage plenumHomePage)
         {
-            _user = hooks.User;
+            _currentPage = hooks.CurrentPage;
             _plenumHomePage = plenumHomePage;
         }
 
@@ -100,8 +100,31 @@ namespace Playwright.Steps
         [Then(@"sollte eine Sitzung '([^']*)' mit der Sitzungsart '([^']*)' existieren")]
         public async Task ThenSollteEineSitzungMitDerSitzungsartExistieren(string sitzungsName, string sitzungsArt)
         {
-            await _plenumHomePage.AssertSitzung(sitzungsName, sitzungsArt);
+            await _plenumHomePage.AssertSitzungWithTitle(sitzungsName, sitzungsArt);
         }
 
+        [Then(@"sollte die Sitzung mit der Sitzungsart '([^']*)' den Teilnehmer '([^']*)' hinterlegt haben")]
+        public async Task ThenSollteDieSitzungMitDerSitzungsartDenTeilnehmerHinterlegtHaben(string sitzungsArt, string teilnehmerName)
+        {
+            await _plenumHomePage.AssertTeilnehmerInSitzung(sitzungsArt, teilnehmerName);
+        }
+
+        [Then(@"sollte dieser Tagesordnungspunkt '([^']*)' in der Sitzung mit der Sitzungsart '([^']*)' existieren")]
+        public async Task ThenSollteDieserTagesordnungspunktInDerSitzungMitDerSitzungsartExistieren(string topName, string sitzungsArt)
+        {
+            await _plenumHomePage.AssertTagesordnungspunktInSitzung(sitzungsArt, topName);
+        }
+
+        [Then(@"sollte dieser Kommentar '([^']*)' auf dem Tagesordnungspunkt '([^']*)' in der Sitzung mit der Sitzungsart '([^']*)' existieren")]
+        public async Task ThenSollteDieserKommentarAufDemTagesordnungspunktInDerSitzungMitDerSitzungsartExistieren(string comment, string topName, string sitzungsArt)
+        {
+            await _plenumHomePage.AssertCommentInTagesordnungspunktInSitzung(sitzungsArt, topName, comment);
+        }
+
+        [Then(@"sollte der Tagesordnungspunkt '([^']*)' in der Sitzung mit der Sitzungsart '([^']*)' den Status '([^']*)' haben")]
+        public async Task ThenSollteDerTagesordnungspunktInDerSitzungMitDerSitzungsartDenStatusHaben(string topName, string sitzungsArt, string state)
+        {
+            await _plenumHomePage.AssertStateOfTagesordnungspunktInSitzung(sitzungsArt, topName, state);
+        }
     }
 }

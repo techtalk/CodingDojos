@@ -8,12 +8,12 @@ namespace Playwright.Steps
     [Binding]
     public class PlaywrightRecordSampleSteps 
     {
-        private readonly IPage _user;
+        private readonly IPage _currentPage;
         private readonly DuckDuckGoHomePage _duckDuckGoHomePage;
 
         public PlaywrightRecordSampleSteps(PlaywrightHooks hooks, DuckDuckGoHomePage duckDuckGoHomePage)
         {
-            _user = hooks.User;
+            _currentPage = hooks.CurrentPage;
             _duckDuckGoHomePage = duckDuckGoHomePage;
         }
 
