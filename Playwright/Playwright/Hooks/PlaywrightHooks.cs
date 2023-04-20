@@ -12,6 +12,7 @@ namespace Playwright.Hooks
         [BeforeScenario]
         public async Task RegisterSingleInstancePractitioner()
         {
+            //Fuer mehr Informationen siehe: https://playwright.dev/dotnet/
             //Playwright initialisieren
             var playwright = await Microsoft.Playwright.Playwright.CreateAsync();
 
