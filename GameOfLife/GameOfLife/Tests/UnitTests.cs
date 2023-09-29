@@ -8,7 +8,7 @@ namespace Tests
         [TestMethod]
         public void TestMethod1()
         {
-            //we could somehow use a verbatim string here..
+            //could we somehow use a regular string here?
             var board = new List<string>
             {
                 "........",
@@ -28,5 +28,7 @@ namespace Tests
             var expected = "........\r\n...**...\r\n...**...\r\n........\r\n........\r\n........\r\n........\r\n........\r\n";
             Assert.AreEqual(expected, nextGen);
         }
+
+        //what are Edge cases we could test?
     }
 }
